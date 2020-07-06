@@ -5,3 +5,5 @@ FACD_metadata/
 .ipynb_checkpoints/
 .idea/
 __pycache__/
+
+*.hdf5

@@ -2,7 +2,7 @@
 ## Desicion Tree
     - Grayscale wird verwendet, um die Anzahl der Dimensionen zu reduzieren
     - shape wird verwendet um die Bilder auf die gleichen Dimensionen zu skalieren -> Verringerung der Features
-    - flatten() verwandelt Bilder in shape zu einem langen Array/Vektor
+    - flatten() verwandelt Features aus einer Matrix zu einem langen eindimensionalen Array/Vektor
     - tree.DecisionTreeClassifier() erstellt einen initialen Desicion Tree
     - mit fit() wird das model auf die Trainingsdaten angepasst
     - model.predict() gibt für Testdaten die erwartete Klasse aus
@@ -15,7 +15,6 @@
   - criterion beeinflusst das Kriterium, welches den Split bewertet (gini oder Entropy)
   - max_depth: maximale Tiefe des Trees
   - max_features: Anzahl betrachenden features
-
 ### Gini-Impurity
 - Wahrscheinlichkeit, dass zwei unterschiedliche Ergebnisse erzielt werden können -> Unreinheit
 ### Entropy
@@ -35,6 +34,21 @@
     - stratified (verteilt)
     - shuffled (random)
 
+## Seaborn
+- ist eine auf matplotlib basierende Visualisierungsbibliothek von Python
+- wird verwendet um die Heatmap darzustellen
+  - square=True &rarr; Felder der Heatmap sind Quadrate
+  - annot=True &rarr; Werte in Heatmap
+  - fmt='d' &rarr; Formatierung von Werten in der Heatmap zu Integer
+  - cmap="YlGnBu" &rarr; Farbschema
+  - linewidths=.5 &rarr; Abstand der Felder in der Heatmap
+  - cbar_kws &rarr; Positionierung der Legende
+
+## NumPy
+- kann kompilierte mathematische und numerische Funktionen und Funktionalitäten in der größtmöglichen Ausführungsgeschwindigkeit durchführen
+  - std &rarr; Standardabweichung
+  - mean &rarr; Durchschnitt von den Werten in einem Array
+  
 ## Confusion Matrix
 - stellt die Zuordnung in einer Matrix dar
 - Type 1 Error: False Positive
@@ -126,7 +140,22 @@
    - Epoche -> Ein durchlauf aller Testdaten
    - Batch -> kleinere Einheit an Testdaten, die gleichzeitig betrachtet wird
    - verbose -> Einstellungen für das Logging
-   - Layer (Conv2D, MaxPool2D, Flatten, Dense) 
+   - Layer (Conv2D, MaxPool2D, Flatten, Dense)
 
+#### Conv2D 
+  - Standard 2D-Convulistion Layer
+  - erstellt convolution Kernel der über das Bild gelegt wird und outputs (tensor) erstellt
+  - Der Kernel wendet filter auf die verschiedenen Bildbereiche an => Anzahld der filter in FUnktionsaufruf definiert  (potenzen von 2 als Anzahl, steigend je tiefer das layer)
 
+### MaxPooling2D
+  - Reduziert dimensionen des Outputs 
+  - Keine Weights / Lernfortschritt 
+  - Legt matrix mit angegebener PoolSize über filter und reduziert sie auf größte Zahl
+
+### Flatten
+ - Convertiert Matrix zu Array => hängt werte hintereinander
+
+### Dense
+ - Jede Input-Node ist mit jeder Output-Node verbunden => Dense/Dichtes Layer
+ - Zur Transformation des Outputs
 

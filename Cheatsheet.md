@@ -8,14 +8,14 @@
     - model.predict() gibt für Testdaten die erwartete Klasse aus
 
 ### DecisionTreeClassifier
+- baut sich aus unterschiedlichen Merkmalen zusammen
+- es gibt ein Wurzelelement, wo sich Blätter von abspalten
 - tree.DecisionTreeClassifier() erstellt einen initialen Desicion Tree
   - random_state kontrolliert den Zufall beim Erstellen des Models
   - criterion beeinflusst das Kriterium, welches den Split bewertet (gini oder Entropy)
   - max_depth: maximale Tiefe des Trees
   - max_features: Anzahl betrachenden features
-- baut sich aus unterschiedlichen Merkmalen zusammen
-- es gibt ein Wurzelelement, wo sich Blätter von abspalten
- 
+
 ### Gini-Impurity
 - Wahrscheinlichkeit, dass zwei unterschiedliche Ergebnisse erzielt werden können -> Unreinheit
 ### Entropy
@@ -32,7 +32,7 @@
   - k gibt an in wie viele Teile der Datensatz für die Crossvalidierung geteilt wird
   - mögliche Arten um Crossvalidierungen durchzuführen:
     - normal (Teile am Stück)
-    - statified (verteilt)
+    - stratified (verteilt)
     - shuffled (random)
 
 ## Confusion Matrix
@@ -108,7 +108,7 @@
 #### Model.fit()
 - Trainiert das Modell
 - Input Data & Labels als Numpy_array
-- Epochs (anzahl Durchläufe), verbose (Logging), Callbacks (Callback Funktione), Validation Data (zum Validieren)
+- Epochs (anzahl Durchläufe), verbose (Logging), Callbacks (Callback Funktion), Validation Data (zum Validieren)
 
 #### Metrics (Accuracy, Precision, Recall)
 - Bei Model.compile mitgegeben

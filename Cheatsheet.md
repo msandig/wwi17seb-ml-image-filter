@@ -91,6 +91,11 @@
 	- Mehrere Inputs, die gewichtet miteinander Addiert werden (Aktivierungsfunktion) 
 	- Output wird so errechnet und an weitere Neuronen weitergegeben
 	- In schichten organisiert (Eingangs + Ausgangsschicht + Hidden Layers) 
+  
+### Optimizer
+- Every time a neural network finishes passing a batch through the network and generating prediction results, it must decide how to use the difference between the results it got and the values it knows to be true.
+- It adjusts the weights on the nodes so that the network steps towards a solution.
+- The algorithm that determines that step is known as the optimization algorithm.
 
 ### Convolutional Neural Network (CNN)
 - erhält den Namen durch die Art der Hidden Layers im Netz (convolutional layers, pooling layers, fully connected layers, and normalization layers)

@@ -85,12 +85,22 @@
 -	Nicht Deep-Learning Framework => interface für DeepLearning Frameworks wie Tensorflow
 
 ## Künstliche Neuronale Netze: 
--	ML Verfahren, dass sich an Biologischer Struktur orientiert
+-	ML Verfahren, dass sich an Biologischer Struktur, dem Neuron orientiert
 -	Neuron: 
   -	Atomare, einfache Einheit
 	- Mehrere Inputs, die gewichtet miteinander Addiert werden (Aktivierungsfunktion) 
 	- Output wird so errechnet und an weitere Neuronen weitergegeben
 	- In schichten organisiert (Eingangs + Ausgangsschicht + Hidden Layers) 
+
+### Convolutional Neural Network (CNN)
+- erhält den Namen durch die Art der Hidden Layers im Netz (convolutional layers, pooling layers, fully connected layers, and normalization layers)
+- Convolutional und Pooling Funktionen sind als Aktivierungsfunktionen verwendet
+  - s. Conv2D + MaxPooling2D
+
+### Recurrent Neural Network (RNN)
+- kann gut Sequenzen verarbeiten
+  - Schrift, Text, Sprache, ...
+- kann im Gegensatz zu Feed-Forward Netzen Informationen an vorherige Schichten / die gleiche Schicht weitergeben
 
 ### ImageDataGenerator
 - Bearbeiten von eingelesenen Bildern für die Verarbeitung im Modell (zB durch vgg16 Preprocessing function)
@@ -145,6 +155,7 @@
 #### Conv2D 
   - Standard 2D-Convulistion Layer
   - erstellt convolution Kernel der über das Bild gelegt wird und outputs (tensor) erstellt
+  - Input Image Matrix wird mit Kernal Matrix zu Output Matrix verrechnet
   - Der Kernel wendet filter auf die verschiedenen Bildbereiche an => Anzahld der filter in FUnktionsaufruf definiert  (potenzen von 2 als Anzahl, steigend je tiefer das layer)
 
 ### MaxPooling2D
@@ -158,4 +169,3 @@
 ### Dense
  - Jede Input-Node ist mit jeder Output-Node verbunden => Dense/Dichtes Layer
  - Zur Transformation des Outputs
-

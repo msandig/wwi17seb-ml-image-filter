@@ -24,6 +24,7 @@
 ### RandomForestClassifier
 - ist eine Vielzahl an Desicion Trees 
   - n_estimators gibt an wie viele Trees in dem Forest enthalten sind
+- die Mehrheit der Desicion Trees entscheidet über den Ausgang des Ergebnisses
 
 ## Crossvalidation
 - wird dazu verwendet, um sicherzustellen, dass es keinen ungünstigen Split des Datensatzes gibt
